@@ -9,8 +9,10 @@ namespace Demo.Models
     {
         [Key]
         public int ProductID { get; set; }
-        public string ProductName { get; set; }
-
+        public string ProductName { get; set; }        
         
+        public string CategoryID { get; set; }
+
+        public Category Category {get; set;}
     }
 }

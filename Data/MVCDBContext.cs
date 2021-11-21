@@ -15,4 +15,8 @@ using Demo.Models;
         public DbSet<Demo.Models.Person> Person { get; set; }
 
         public DbSet<Demo.Models.Student> Student { get; set; }
+
+        public DbSet<Demo.Models.Category> Category { get; set; }
+
+        public DbSet<Demo.Models.Product> Product { get; set; }
     }

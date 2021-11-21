@@ -14,6 +14,19 @@ namespace Demo.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.9");
 
+            modelBuilder.Entity("Demo.Models.Category", b =>
+                {
+                    b.Property<string>("CategoryID")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CategoryName")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("CategoryID");
+
+                    b.ToTable("Category");
+                });
+
             modelBuilder.Entity("Demo.Models.Person", b =>
                 {
                     b.Property<int>("PersonID")
@@ -34,12 +47,31 @@ namespace Demo.Migrations
                     b.HasDiscriminator<string>("Discriminator").HasValue("Person");
                 });
 
+            modelBuilder.Entity("Demo.Models.Product", b =>
+                {
+                    b.Property<int>("ProductID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("CategoryID")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ProductName")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("ProductID");
+
+                    b.HasIndex("CategoryID");
+
+                    b.ToTable("Products");
+                });
+
             modelBuilder.Entity("Demo.Models.Student", b =>
                 {
                     b.HasBaseType("Demo.Models.Person");
 
-                    b.Property<int>("Address")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Address")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("FullName")
                         .HasColumnType("TEXT");
@@ -47,6 +79,13 @@ namespace Demo.Migrations
                     b.ToTable("Persons");
 
                     b.HasDiscriminator().HasValue("Student");
+                });
+
+            modelBuilder.Entity("Demo.Models.Product", b =>
+                {
+                    b.HasOne("Demo.Models.Category", "Category")
+                        .WithMany("Products")
+                        .HasForeignKey("CategoryID");
                 });
 #pragma warning restore 612, 618
         }

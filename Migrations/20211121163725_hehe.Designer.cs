@@ -7,14 +7,27 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Demo.Migrations
 {
     [DbContext(typeof(MVCDBContext))]
-    [Migration("20211121143931_InitialCreate1")]
-    partial class InitialCreate1
+    [Migration("20211121163725_hehe")]
+    partial class hehe
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.9");
+
+            modelBuilder.Entity("Demo.Models.Category", b =>
+                {
+                    b.Property<string>("CategoryID")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CategoryName")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("CategoryID");
+
+                    b.ToTable("Category");
+                });
 
             modelBuilder.Entity("Demo.Models.Person", b =>
                 {
@@ -36,12 +49,31 @@ namespace Demo.Migrations
                     b.HasDiscriminator<string>("Discriminator").HasValue("Person");
                 });
 
+            modelBuilder.Entity("Demo.Models.Product", b =>
+                {
+                    b.Property<int>("ProductID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("CategoryID")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ProductName")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("ProductID");
+
+                    b.HasIndex("CategoryID");
+
+                    b.ToTable("Products");
+                });
+
             modelBuilder.Entity("Demo.Models.Student", b =>
                 {
                     b.HasBaseType("Demo.Models.Person");
 
-                    b.Property<int>("Address")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Address")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("FullName")
                         .HasColumnType("TEXT");
@@ -49,6 +81,13 @@ namespace Demo.Migrations
                     b.ToTable("Persons");
 
                     b.HasDiscriminator().HasValue("Student");
+                });
+
+            modelBuilder.Entity("Demo.Models.Product", b =>
+                {
+                    b.HasOne("Demo.Models.Category", "Category")
+                        .WithMany("Products")
+                        .HasForeignKey("CategoryID");
                 });
 #pragma warning restore 612, 618
         }

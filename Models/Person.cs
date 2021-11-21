@@ -14,4 +14,4 @@ namespace Demo.Models
         
     }
 }
-//dotnet-aspnet-codegenerator controller -name StudentsController -m Student -dc MVCDBContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries -sqlite
+//dotnet-aspnet-codegenerator controller -name ProductsController -m Product -dc MVCDBContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries -sqlite
