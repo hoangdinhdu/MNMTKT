@@ -19,4 +19,12 @@ using Demo.Models;
         public DbSet<Demo.Models.Category> Category { get; set; }
 
         public DbSet<Demo.Models.Product> Product { get; set; }
+
+        public DbSet<Demo.Models.People> People { get; set; }
+
+        public DbSet<Demo.Models.Customer> Customer { get; set; }
+
+        public DbSet<Demo.Models.Hehe> Hehe { get; set; }
+
+        public DbSet<Demo.Models.Haha> Haha { get; set; }
     }

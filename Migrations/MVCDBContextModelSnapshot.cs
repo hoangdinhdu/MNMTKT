@@ -27,6 +27,58 @@ namespace Demo.Migrations
                     b.ToTable("Category");
                 });
 
+            modelBuilder.Entity("Demo.Models.Haha", b =>
+                {
+                    b.Property<string>("HahaID")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("HahaName")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("HahaID");
+
+                    b.ToTable("Haha");
+                });
+
+            modelBuilder.Entity("Demo.Models.Hehe", b =>
+                {
+                    b.Property<int>("HeheID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("HahaID")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("HeheName")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("HeheID");
+
+                    b.HasIndex("HahaID");
+
+                    b.ToTable("Hehes");
+                });
+
+            modelBuilder.Entity("Demo.Models.People", b =>
+                {
+                    b.Property<int>("PeopleID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("PeopleName")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("PeopleID");
+
+                    b.ToTable("People");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("People");
+                });
+
             modelBuilder.Entity("Demo.Models.Person", b =>
                 {
                     b.Property<int>("PersonID")
@@ -66,6 +118,21 @@ namespace Demo.Migrations
                     b.ToTable("Products");
                 });
 
+            modelBuilder.Entity("Demo.Models.Customer", b =>
+                {
+                    b.HasBaseType("Demo.Models.People");
+
+                    b.Property<int>("Adress")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("TEXT");
+
+                    b.ToTable("People");
+
+                    b.HasDiscriminator().HasValue("Customer");
+                });
+
             modelBuilder.Entity("Demo.Models.Student", b =>
                 {
                     b.HasBaseType("Demo.Models.Person");
@@ -79,6 +146,13 @@ namespace Demo.Migrations
                     b.ToTable("Persons");
 
                     b.HasDiscriminator().HasValue("Student");
+                });
+
+            modelBuilder.Entity("Demo.Models.Hehe", b =>
+                {
+                    b.HasOne("Demo.Models.Haha", "Haha")
+                        .WithMany("Hehes")
+                        .HasForeignKey("HahaID");
                 });
 
             modelBuilder.Entity("Demo.Models.Product", b =>
