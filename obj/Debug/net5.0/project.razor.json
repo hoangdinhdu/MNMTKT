@@ -15619,13 +15619,28 @@
   "RootNamespace": "Demo",
   "Documents": [
     {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Peoples\\Edit.cshtml",
+      "TargetPath": "Views\\Peoples\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\NetCore\\Demo\\Views\\Persons\\Details.cshtml",
       "TargetPath": "Views\\Persons\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Customers\\Delete.cshtml",
+      "TargetPath": "Views\\Customers\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\NetCore\\Demo\\Views\\Categorys\\Edit.cshtml",
       "TargetPath": "Views\\Categorys\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Hehes\\Index.cshtml",
+      "TargetPath": "Views\\Hehes\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15649,8 +15664,43 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Peoples\\Index.cshtml",
+      "TargetPath": "Views\\Peoples\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\NetCore\\Demo\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Movies\\Index.cshtml",
+      "TargetPath": "Views\\Movies\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Hehes\\Delete.cshtml",
+      "TargetPath": "Views\\Hehes\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Peoples\\Details.cshtml",
+      "TargetPath": "Views\\Peoples\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Hahas\\Edit.cshtml",
+      "TargetPath": "Views\\Hahas\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Hahas\\Index.cshtml",
+      "TargetPath": "Views\\Hahas\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Hehes\\Details.cshtml",
+      "TargetPath": "Views\\Hehes\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15661,6 +15711,26 @@
     {
       "FilePath": "e:\\NetCore\\Demo\\Views\\Products\\Edit.cshtml",
       "TargetPath": "Views\\Products\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Movies\\Edit.cshtml",
+      "TargetPath": "Views\\Movies\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Hehes\\Create.cshtml",
+      "TargetPath": "Views\\Hehes\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Movies\\Create.cshtml",
+      "TargetPath": "Views\\Movies\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Peoples\\Delete.cshtml",
+      "TargetPath": "Views\\Peoples\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15699,8 +15769,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Hehes\\Edit.cshtml",
+      "TargetPath": "Views\\Hehes\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\NetCore\\Demo\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Customers\\Index.cshtml",
+      "TargetPath": "Views\\Customers\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15719,8 +15799,33 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Movies\\Details.cshtml",
+      "TargetPath": "Views\\Movies\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Movies\\Delete.cshtml",
+      "TargetPath": "Views\\Movies\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Customers\\Details.cshtml",
+      "TargetPath": "Views\\Customers\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Hahas\\Delete.cshtml",
+      "TargetPath": "Views\\Hahas\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\NetCore\\Demo\\Views\\Categorys\\Delete.cshtml",
       "TargetPath": "Views\\Categorys\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Peoples\\Create.cshtml",
+      "TargetPath": "Views\\Peoples\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15734,6 +15839,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Customers\\Edit.cshtml",
+      "TargetPath": "Views\\Customers\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\NetCore\\Demo\\Views\\Persons\\Edit.cshtml",
       "TargetPath": "Views\\Persons\\Edit.cshtml",
       "FileKind": "mvc"
@@ -15744,6 +15854,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Hahas\\Create.cshtml",
+      "TargetPath": "Views\\Hahas\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Hahas\\Details.cshtml",
+      "TargetPath": "Views\\Hahas\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\NetCore\\Demo\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
@@ -15751,6 +15871,11 @@
     {
       "FilePath": "e:\\NetCore\\Demo\\Views\\Products\\Delete.cshtml",
       "TargetPath": "Views\\Products\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Customers\\Create.cshtml",
+      "TargetPath": "Views\\Customers\\Create.cshtml",
       "FileKind": "mvc"
     }
   ],
