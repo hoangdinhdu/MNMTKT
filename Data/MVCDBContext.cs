@@ -29,5 +29,7 @@ using Demo.Models;
         public DbSet<Demo.Models.Haha> Haha { get; set; }
 
         public DbSet<Demo.Models.Movie> Movie { get; set; }
+
+        public DbSet<Demo.Models.Phim> Phim { get; set; }
         
     }

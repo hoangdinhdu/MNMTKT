@@ -15674,6 +15674,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Phims\\Edit.cshtml",
+      "TargetPath": "Views\\Phims\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Phims\\Index.cshtml",
+      "TargetPath": "Views\\Phims\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\NetCore\\Demo\\Views\\Movies\\Index.cshtml",
       "TargetPath": "Views\\Movies\\Index.cshtml",
       "FileKind": "mvc"
@@ -15736,6 +15746,11 @@
     {
       "FilePath": "e:\\NetCore\\Demo\\Views\\Persons\\Delete.cshtml",
       "TargetPath": "Views\\Persons\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Phims\\Details.cshtml",
+      "TargetPath": "Views\\Phims\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15814,6 +15829,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Phims\\Delete.cshtml",
+      "TargetPath": "Views\\Phims\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\NetCore\\Demo\\Views\\Hahas\\Delete.cshtml",
       "TargetPath": "Views\\Hahas\\Delete.cshtml",
       "FileKind": "mvc"
@@ -15846,6 +15866,11 @@
     {
       "FilePath": "e:\\NetCore\\Demo\\Views\\Persons\\Edit.cshtml",
       "TargetPath": "Views\\Persons\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\Demo\\Views\\Phims\\Create.cshtml",
+      "TargetPath": "Views\\Phims\\Create.cshtml",
       "FileKind": "mvc"
     },
     {

@@ -14,4 +14,4 @@ namespace Demo.Models
         
     }
 }
-//dotnet-aspnet-codegenerator controller -name MovieGenresController -m MovieGenre -dc MVCDBContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries -sqlite
+//dotnet-aspnet-codegenerator controller -name PhimsController -m Phim -dc MVCDBContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries -sqlite

@@ -203,3 +203,8 @@ E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Movies\Delete.cshtml.g.cs
 E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Movies\Details.cshtml.g.cs
 E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Movies\Edit.cshtml.g.cs
 E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Movies\Index.cshtml.g.cs
+E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Phims\Create.cshtml.g.cs
+E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Phims\Delete.cshtml.g.cs
+E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Phims\Details.cshtml.g.cs
+E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Phims\Edit.cshtml.g.cs
+E:\NetCore\Demo\obj\Debug\net5.0\Razor\Views\Phims\Index.cshtml.g.cs
