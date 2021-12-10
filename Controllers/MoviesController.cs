@@ -6,17 +6,66 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Demo.Models;
+using Microsoft.AspNetCore.Http;
+using System.IO;
+using Demo.Models.Process;
+using System.Data;
+using System.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
 
 namespace Demo.Controllers
 {
     public class MoviesController : Controller
     {
+        
         private readonly MVCDBContext _context;
+        
+        ExcelProcess _excelPro = new ExcelProcess();
+         public IConfiguration Configuration {get;}
 
         public MoviesController(MVCDBContext context)
         {
             _context = context;
         }
+         private int WriteDatableToDatabse(DataTable dt)
+
+    {
+
+        try{
+
+            var con = Configuration.GetConnectionString("DefaltConnection");
+
+            SqlBulkCopy bulkcopy = new SqlBulkCopy(con);
+
+            bulkcopy.DestinationTableName = "Movie";
+
+            bulkcopy.ColumnMappings.Add(0, "Id");
+
+            bulkcopy.ColumnMappings.Add(1, "Title");
+
+            bulkcopy.ColumnMappings.Add(2, "ReleaseDate");
+
+            bulkcopy.ColumnMappings.Add(3, "Genre");
+
+            bulkcopy.ColumnMappings.Add(4, "Price");
+
+            bulkcopy.ColumnMappings.Add(5, "Rating");
+
+           
+
+            bulkcopy.WriteToServer(dt);
+
+        }
+
+        catch{
+
+            return 0;
+
+        }
+
+        return dt.Rows.Count;
+
+    }
         
 
         // GET: Movies
@@ -79,16 +128,45 @@ public async Task<IActionResult> Index(string movieGenre, string searchString)
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price")] Movie movie)
+        public async Task<IActionResult> Create(IFormFile file)
+{
+    if (file!=null)
+    {
+        string fileExtension = Path.GetExtension(file.FileName);
+        if (fileExtension != ".xls" && fileExtension != ".xlsx")
         {
+            ModelState.AddModelError("", "Please choose excel file to upload!");
+        }
+        else
+        {
+            //rename file when upload to server
+            //tao duong dan /Uploads/Excels de luu file upload len server
+            var fileName = "Ten file muon luu";
+            var filePath = Path.Combine(Directory.GetCurrentDirectory() + "/Uploads/Excels", fileName + fileExtension);
+            var fileLocation = new FileInfo(filePath).ToString();
+
             if (ModelState.IsValid)
             {
-                _context.Add(movie);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                //upload file to server
+                if (file.Length > 0)
+                {
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        //save file to server
+                        await file.CopyToAsync(stream);
+                        //read data from file and write to database
+                        //_excelPro la doi tuong xu ly file excel ExcelProcess
+                        var dt = _excelPro.ExcelToDataTable(fileLocation);
+                        //ghi du lieu datatable vao database
+                        
+                    }
+                    return RedirectToAction(nameof(Index));
+                }
             }
-            return View(movie);
         }
+    }
+    return View();
+}
 
         // GET: Movies/Edit/5
         public async Task<IActionResult> Edit(int? id)
